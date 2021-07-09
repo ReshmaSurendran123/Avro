@@ -1,0 +1,94 @@
+{
+  "name": "Customer",
+  "type": "record",
+  "namespace": "com.example.avro.entity",
+  "fields": [
+    {
+      "name": "id",
+      "type": "int"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "username",
+      "type": "string"
+    },
+    {
+      "name": "email",
+      "type": "string"
+    },
+    {
+      "name": "address",
+      "type": {
+        "name": "address",
+        "type": "record",
+        "fields": [
+          {
+            "name": "street",
+            "type": "string"
+          },
+          {
+            "name": "suite",
+            "type": "string"
+          },
+          {
+            "name": "city",
+            "type": "string"
+          },
+          {
+            "name": "zipcode",
+            "type": "string"
+          },
+          {
+            "name": "geo",
+            "type": {
+              "name": "geo",
+              "type": "record",
+              "fields": [
+                {
+                  "name": "lat",
+                  "type": "string"
+                },
+                {
+                  "name": "lng",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "phone",
+      "type": "string"
+    },
+    {
+      "name": "website",
+      "type": "string"
+    },
+    {
+      "name": "company",
+      "type": {
+        "name": "company",
+        "type": "record",
+        "fields": [
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "catchPhrase",
+            "type": "string"
+          },
+          {
+            "name": "bs",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ]
+}
